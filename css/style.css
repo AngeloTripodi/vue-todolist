@@ -105,6 +105,8 @@ hr{
 }
 
 ul li{
+    display: flex;
+    justify-content: space-between;
     margin-top: 15px;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -138,4 +140,10 @@ ul li{
 
 .lineTrough {
     text-decoration: line-through;
+}
+
+.delete-icon{
+    padding-left: 1rem;
+    color: rgb(195, 3, 3);
+    cursor:pointer;
 }

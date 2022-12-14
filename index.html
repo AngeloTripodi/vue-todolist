@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toboolist</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
 <div id="app">
@@ -32,10 +33,13 @@
 
     <section class="container">
         <section class="container-section">
-            <div class="title">Task:</div>
-            <ul class="task-list">
-                <li v-for="toDo in toDoList" :class="(toDo.done === true) ? 'lineTrough' : ''"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> </li>
+            <!-- <div class="title">Task:</div> -->
+            <ul class="task-list" v-if="toDoList.length > 0">
+                <li v-for="toDo in toDoList" :class="(toDo.done === true) ? 'lineTrough' : ''"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> <span ><i @click="removeToDo(toDo)" class="fa-solid fa-circle-xmark delete-icon"></i></span> </li>
             </ul>
+            <p v-else>
+                LA TUA TO DO LIST E' VUOTA. AGGIUNGI UN NUOVO TASK!
+            </p>
         </section>
     </section>
    </main>

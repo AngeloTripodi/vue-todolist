@@ -28,7 +28,13 @@ createApp({
                  }
             },
             methods: {
-
+                removeToDo : function(element){
+                    index = this.toDoList.indexOf(element)
+                    if(index > -1) {
+                        this.toDoList.splice(index, 1)
+                    }
+                    
+                },
             }
         
     
