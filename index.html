@@ -34,7 +34,7 @@
         <section class="container-section">
             <div class="title">Task:</div>
             <ul class="task-list">
-                <li v-for="toDo in toDoList"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> </li>
+                <li v-for="toDo in toDoList" :class="(toDo.done === true) ? 'lineTrough' : ''"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> </li>
             </ul>
         </section>
     </section>

@@ -134,3 +134,8 @@ ul li{
 #sales{
     background-color: #B0C926;
 }
+
+
+.lineTrough {
+    text-decoration: line-through;
+}

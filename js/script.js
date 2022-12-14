@@ -20,9 +20,17 @@ createApp({
                     }, {
                         text : 'Prenotare ristorante @Ristorante da Mario',
                         done : true
+                    },{
+                        text : 'Partita Tennis @21:00',
+                        done : false
                     },
-            ],
-        }
-    },
+                        ],
+                 }
+            },
+            methods: {
+
+            }
+        
+    
 
 }).mount('#app')
