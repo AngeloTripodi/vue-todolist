@@ -30,14 +30,21 @@ createApp({
             },
             methods: {
                 removeToDo : function(element){
-                    index = this.toDoList.indexOf(element)
+                    const index = this.toDoList.indexOf(element)
                     if(index > -1) {
                         this.toDoList.splice(index, 1)
                     }
                     
                 },
                 addToDo: function(element){
-                    this.toDoList.push({text : element})
+                    if (element != "" && element.length >= 2){
+                        this.toDoList.push({text : element})
+                        this.clearInput();
+                    }
+                    
+                },
+                clearInput : function(){
+                    this.newElement = "";
                 }
             }
         
