@@ -3,7 +3,8 @@ const {createApp} = Vue
 createApp({
     data(){
         return{
-            index : 0,
+
+            newElement : "",
             toDoList : [
                 {
                     text : 'Lezione Boolean @09:00',
@@ -35,6 +36,9 @@ createApp({
                     }
                     
                 },
+                addToDo: function(element){
+                    this.toDoList.push({text : element})
+                }
             }
         
     

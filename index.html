@@ -23,8 +23,8 @@
 
    <main class="white-container">
     <div class="button-section">
-        <button class="button-addtask">Add Task</button>
-        <button class="button-addsection">Add Section</button>
+        <input type="text" v-model="newElement">
+        <button class="button-addtask" @click="addToDo(newElement)">AGGIUNGI NUOVO TO DO</button>
     </div>
     
     <div id="divider">
