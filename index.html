@@ -35,7 +35,7 @@
         <section class="container-section">
             <!-- <div class="title">Task:</div> -->
             <ul class="task-list" v-if="toDoList.length > 0">
-                <li v-for="toDo in toDoList" :class="(toDo.done === true) ? 'lineTrough' : ''"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> <span ><i @click="removeToDo(toDo)" class="fa-solid fa-circle-xmark delete-icon"></i></span> </li>
+                <li v-for="toDo in toDoList" :class="(toDo.done === true) ? 'lineTrough' : ''" @click="toggleClass(this)"> {{toDo.text}}  <!-- <span class="button-task" id="editorial">Editorial</span> --> <span ><i @click="removeToDo(toDo)" class="fa-solid fa-circle-xmark delete-icon"></i></span> </li>
             </ul>
             <p v-else>
                 LA TUA TO DO LIST E' VUOTA. AGGIUNGI UN NUOVO TASK!

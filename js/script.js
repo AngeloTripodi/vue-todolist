@@ -43,10 +43,19 @@ createApp({
                     }
                     
                 },
+
                 clearInput : function(){
                     this.newElement = "";
+                },
+
+                toggleClass: function(event){
+                    this.toDoList.done = !this.toDoList.done
+                    console.log(!this.toDoList.done)
+                    if(this.toDoList.done === true){
+                       
                 }
             }
+        }
         
     
 
